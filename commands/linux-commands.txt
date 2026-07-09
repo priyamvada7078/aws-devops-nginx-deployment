@@ -1,0 +1,23 @@
+Commands Used
+
+sudo apt update
+
+sudo apt install nginx -y
+
+systemctl status nginx
+
+sudo systemctl restart nginx
+
+hostname
+
+whoami
+
+pwd
+
+df -h
+
+free -h
+
+ps aux | head
+
+curl
