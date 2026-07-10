@@ -19,6 +19,14 @@ A complete cloud deployment project demonstrating how to deploy a static website
 
 ---
 
+# 🌐 Live Website
+
+**Public IPv4 Address:** [http://35.154.253.141](http://35.154.253.141)
+
+> The website was successfully deployed on an AWS EC2 Ubuntu instance and was accessible at the time of assignment submission.
+
+---
+
 # 📚 Table of Contents
 
 * About the Project
@@ -133,7 +141,7 @@ aws-devops-nginx-deployment/
 
 ---
 
-#  Deployment Workflow
+# git status Deployment Workflow
 
 ## Step 1 — Launch EC2 Instance
 
@@ -194,7 +202,21 @@ The website became accessible using the EC2 Public IPv4 Address.
 
 ---
 
-## Step 7 — Verify Website
+## Step 7 — Restart Nginx
+
+```bash
+sudo systemctl restart nginx
+```
+
+```bash
+sudo systemctl status nginx
+```
+
+After replacing the default page with the custom `index.html`, Nginx was restarted so that the latest website files were loaded correctly. The status command was run right after to confirm the service came back up as **active (running)**. This isn't always strictly required for a plain HTML change, but restarting and checking the status is a good habit that removes any doubt about the server serving the updated file.
+
+---
+
+## Step 8 — Verify Website
 
 ```bash
 curl http://localhost
@@ -204,7 +226,7 @@ The command successfully returned the HTML page, confirming that the web server 
 
 ---
 
-## Step 8 — Linux Administration
+## Step 9 — Linux Administration
 
 The following Linux commands were used during the deployment process.
 
@@ -217,6 +239,8 @@ The following Linux commands were used during the deployment process.
 | free -h               | Check memory usage        |
 | ps aux                | Display running processes |
 | curl http://localhost | Verify local website      |
+| sudo systemctl restart nginx | Restart the Nginx service |
+| sudo systemctl status nginx  | Check Nginx service status |
 
 ---
 
@@ -263,6 +287,7 @@ The repository contains screenshots of every major step performed during the pro
 * Nginx Installation
 * Nginx Service Status
 * Custom Dashboard Deployment
+* Nginx Restart & Status Check
 * Linux Commands
 * Browser Output
 * Docker Bonus Task
