@@ -356,6 +356,16 @@ KIET Group of Institutions
 
 ---
 
+## 🌐 Live Demo
+
+The website is hosted on AWS EC2.
+
+**Public URL**
+
+http://35.154.253.141
+
+> The server was active at the time of assignment submission.
+
 # ⭐ Acknowledgement
 
 This project was completed as part of an AWS DevOps internship assessment to demonstrate practical knowledge of cloud infrastructure, Linux administration, web server deployment, Docker basics, and project documentation.
